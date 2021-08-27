@@ -1,0 +1,52 @@
+<script>
+//cum cream o functie?
+
+function datePersonale(nume, varsta, angajat ){
+    let a;
+    if(angajat === true){
+        a = "angajat";
+
+    }
+    else {
+        a = "somer";
+    }
+    console.log (nume + "are varsta de " + varsta + " de ani si este " + a);
+
+}
+datePersonale("Radu ", 30, true);
+datePersonale ("Vlad ", 26,false);
+
+
+//cum definim o functie anonima?
+let masina = {
+    brand: "Audi",
+    model: "A4",
+    anFabricatie : 2014,
+    imatriculat: true,
+    extraoptiuni: ["aer conditionat","servodirectie","geamuri electrice"],
+    nrImatriculare: "B47ABC",
+    garaj:{
+        suprafata: 16,
+        strada: "Ion Creanga",
+        ocupat: false
+
+
+    },
+    salut: function(){
+        console.log("Salut sunt masina ta.");
+    }
+}
+masina.salut();
+
+// o functie in care folosim un obiect si un for
+// cum sa preiei automat lungimea unui array? x.length -lungimea array-ului x
+function afisareMasini(x){
+    for(i=0; i<x.length ; i++){
+        console.log (x[i]);
+    }
+}
+afisareMasini(["BMW", "Audi", "Seat"]);
+afisareMasini(["BMW", "Audi", "Seat", "Dacia"]);
+
+
+</script>

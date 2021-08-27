@@ -1,0 +1,139 @@
+<script>
+
+let nume = "Radu"; // tip de date : string
+let varsta = 30; // tip de date : numeric
+let aiFacutArmata = true; // tip de date : boolean sau true/false
+
+const numeC = "Alin";
+const varstaC = 33;
+const aiFacutArmataC = 0;
+
+varsta = varsta % 4; //operatii de baza - + / * %
+console.log(varsta);
+
+ 
+
+
+nume = nume + " Popescu";
+console.log(nume);
+
+aiFacutArmata = !aiFacutArmata;
+
+console.log(aiFacutArmata );
+
+
+let masini = ["Dacia", "Audi", "BMW"]; // tip de date array sau vectori 
+let votPresedinte = [2006, 2010, 2014];
+console.log(masini);
+console.log(masini[0]);
+console.log(masini [1]);
+
+
+
+let masina = {
+    brand: "Audi",
+    model: "A4",
+    anFabricatie : 2014,
+    imatriculat: true,
+    extraoptiuni: ["aer conditionat","servodirectie","geamuri electrice"],
+    nrImatriculare: "B47ABC",
+    garaj:{
+        suprafata: 16,
+        strada: "Ion Creanga",
+        ocupat: false
+
+
+    }
+}
+
+
+console.log(masina);
+console.log(masina.model);
+console.log(masina.extraoptiuni[1]);
+console.log(masina.garaj.strada);
+
+a=2;
+b=1;
+c= 5;
+
+if(a>b || c===b && b<c){
+    console.log("IF");
+
+}
+else{
+    console.log("Else")
+}
+
+
+if(a<b){
+    console.log("IF1");
+
+}
+else if (c<b){
+    console.log( "IF2");
+}
+else{
+    console.log("Else")
+}
+
+for(i=0; i<5; i++){
+    console.log("Numarul curent este " + i);
+
+}
+
+animale = ["pisica", "leu", "caprioara"];
+for (i=0; i<3; i++){
+    console.log("Animal: "+ animale[i]);
+    //console.log("Animal: "+ animale[0]);
+    //console.log("Animal: "+ animale[1]);
+    //console.log("Animal: "+ animale[2]);
+}
+
+function salut(){
+    console.log("Salut");
+}
+salut();
+
+function buna(n){
+    console.log("Buna " + n);
+}
+buna("Elena");
+buna("Alin");
+
+//facem o functie care imparte doua numere 
+
+function impartire(a,b){
+    console.log("Impartirea e = " + a/b);
+}
+impartire(8,4);
+impartire(8,5);
+
+//function datePersonale(nume, varsta, angajat ){
+   // console.log (nume + "are varsta de " + varsta + " de ani si este " + angajat );
+
+//}
+//datePersonale("Radu", 30, true);
+
+function datePersonale(nume, varsta, angajat ){
+    let a;
+    if(angajat === true){
+        a = "angajat";
+
+    }
+    else {
+        a = "somer";
+    }
+    console.log (nume + "are varsta de " + varsta + " de ani si este " + a);
+
+}
+datePersonale("Radu ", 30, true);
+datePersonale ("Vlad ", 26,false);
+
+
+
+
+
+
+
+
+ </script>
