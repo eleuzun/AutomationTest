@@ -14,15 +14,7 @@ describe('eMag.ro', () => {
         await resigilateButton.click();
         await expect(browser).toHaveTitle('Produse resigilate - eMAG.ro');
         
-
         
-
-
-
-
-
-
-
     });
 
 
