@@ -22,7 +22,7 @@ describe('eMag.ro', () => {
     it('should have a working search', async () => {
         const searchBox = await $('#searchboxTrigger');
         const searchButton = await $('.searchbox-submit-button');
-        await searchBox.setValue ('tricou Polo');
+        await searchBox.setValue ('tricou polo');
         await searchButton.click();
 
         await expect(browser).toHaveTitle('Cauți tricou polo? Alege din oferta eMAG.ro');
