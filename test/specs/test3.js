@@ -1,6 +1,6 @@
 describe ('libris.ro', async() =>{
 
-    it('should not log in with incorrect credentials', async() => {
+   /* it('should not log in with incorrect credentials', async() => {
         
         await browser.url ('https://libris.ro/auth/login.jsp');
         const userInput = await $('#date-inregistrare-user');
@@ -14,7 +14,7 @@ describe ('libris.ro', async() =>{
     
      });
      
-    it ('should log in with the correct credentials', async() => {
+   it ('should log in with the correct credentials', async() => {
         
         await browser.url ('https://libris.ro/');
         await browser.newWindow('https://libris.ro/auth/login.jsp')
@@ -46,7 +46,7 @@ it('should add a book to wishlist', async() =>{
     const wishListPage = await $('.wishlist-section-ct');
     await expect(wishListPage).toExist();
 
-});
+});*/
 
 
 it('should search a book', async() =>{
@@ -54,12 +54,16 @@ await browser.url('https://libris.ro/');
 
    const searchBox = await $('#autoCompleteMobile');
    const searchButton = await $('#autoCompleteButtonMobile');
+   await searchBox.keys('Enter');
    await searchBox.setValue('irina binder');
-   await searchButton.click();
-   await browser.newWindow('https://libris.ro/search?iv.q=irina%20binder');
-   await expect(browser).toHaveUrl('https://libris.ro/search?iv.q=irina%20binder');
+   await searchBox.keys('Enter');
    
 
 
+  await browser.newWindow('https://libris.ro/search?iv.q=irina%20binder');
+  await expect(browser).toHaveUrl('https://libris.ro/search?iv.q=irina%20binder');
+
+
+
 });
-});    
+});
