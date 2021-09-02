@@ -1,6 +1,6 @@
 describe ('libris.ro', async() =>{
 
-   /* it('should not log in with incorrect credentials', async() => {
+    it('should not log in with incorrect credentials', async() => {
         
         await browser.url ('https://libris.ro/auth/login.jsp');
         const userInput = await $('#date-inregistrare-user');
@@ -46,7 +46,7 @@ it('should add a book to wishlist', async() =>{
     const wishListPage = await $('.wishlist-section-ct');
     await expect(wishListPage).toExist();
 
-});*/
+});
 
 
 it('should search a book', async() =>{
