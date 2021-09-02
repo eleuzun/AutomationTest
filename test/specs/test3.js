@@ -52,12 +52,11 @@ it('should add a book to wishlist', async() =>{
 it('should search a book', async() =>{
 await browser.url('https://libris.ro/');
 
-   const searchBox = await $('#autoCompleteMobile');
-   const searchButton = await $('#autoCompleteButtonMobile');
+   const searchBox = await $('#autoComplete');
+   const searchButton = await $('#autoCompleteButton');
    await searchBox.keys('Enter');
    await searchBox.setValue('irina binder');
    await searchBox.keys('Enter');
-   
 
 
   await browser.newWindow('https://libris.ro/search?iv.q=irina%20binder');
