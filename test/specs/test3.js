@@ -56,6 +56,9 @@ await browser.url('https://libris.ro/');
    const searchButton = await $('#autoCompleteButtonMobile');
    await searchBox.setValue('irina binder');
    await searchButton.click();
+   await browser.newWindow('https://libris.ro/search?iv.q=irina%20binder');
+   await expect(browser).toHaveUrl('https://libris.ro/search?iv.q=irina%20binder');
+   
 
 
 });
