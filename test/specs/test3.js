@@ -14,7 +14,7 @@ describe ('libris.ro', async() =>{
     
      });
      
-   it ('should log in with the correct credentials', async() => {
+     it ('should log in with the correct credentials', async() => {
         
         await browser.url ('https://libris.ro/');
         await browser.newWindow('https://libris.ro/auth/login.jsp')
@@ -26,14 +26,12 @@ describe ('libris.ro', async() =>{
         await loginButton.click();
         await browser.newWindow('https://libris.ro/account/personalInformations');
         await expect(browser).toHaveUrlContaining('https://libris.ro/account/personalInformations');
-       const myAccount = await $('.cont-pg-title');
+        const myAccount = await $('.cont-pg-title');
         await expect(myAccount).toExist();
 
      });
-
-
     
-it('should add a book to wishlist', async() =>{
+     it('should add a book to wishlist', async() =>{
     
     await browser.url('https://libris.ro/prima-iubire-alina-sfirlea-LIB978-606-029-417-7--p21797361.html');
     await expect(browser).toHaveTitle('Prima iubire - Alina Sfirlea - Libris');
@@ -48,19 +46,16 @@ it('should add a book to wishlist', async() =>{
 
 });
 
-
-it('should search a book', async() =>{
-await browser.url('https://libris.ro/');
-
+  it('should search a book', async() =>{
+  
+   await browser.url('https://libris.ro/');
    const searchBox = await $('#autoComplete');
    const searchButton = await $('#autoCompleteButton');
    await searchBox.keys('Enter');
    await searchBox.setValue('irina binder');
    await searchBox.keys('Enter');
-
-
-  await browser.newWindow('https://libris.ro/search?iv.q=irina%20binder');
-  await expect(browser).toHaveUrl('https://libris.ro/search?iv.q=irina%20binder');
+   await browser.newWindow('https://libris.ro/search?iv.q=irina%20binder');
+   await expect(browser).toHaveUrl('https://libris.ro/search?iv.q=irina%20binder');
 
 
 

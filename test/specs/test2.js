@@ -4,8 +4,7 @@ describe('eMag.ro', () => {
         await browser.url('http://www.emag.ro'); 
         const logo = await $('.navbar-brand');
         await expect (logo).toExist();
- 
-      
+
 
     });
     
@@ -17,6 +16,4 @@ describe('eMag.ro', () => {
         await expect(browser).toHaveTitle('Produse resigilate - eMAG.ro');
         
     });
-
-
 });
